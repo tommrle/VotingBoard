@@ -1,0 +1,61 @@
+<template name="LeaderboardTemplate">
+	<div class="leaderboard">
+
+		<center>
+		<nav>
+			<a href="{{ pathFor 'home'}}" style="color:white;">Home</a>
+			 - 
+			<a href id="logout" style="color:white;">Log Out</a>
+		</nav>
+
+		<table class="col-left span5 offset1">
+			<th>Rank</th>
+			<th>Pic</th>
+			<th>Name</th>
+			<th>Popularity</th>
+
+			{{#each GetTableLeft}}
+				<tr>
+					<td id="rnk{{lstrnk}}"><center>{{lstrnk}}</center></td>
+					<td><center><img class="headshot" src={{img}} /></center></td>
+					<td id="name"><center>{{name}}</center></td>
+					<td><center>{{score}}%</center></td>
+				</tr>
+			{{/each}}
+		</table>
+
+		<table class="col-right span5">
+			<th>Rank</th>
+			<th>Pic</th>
+			<th>Name</th>
+			<th>Popularity</th>
+
+			{{#each GetTableRight}}
+				<tr>
+					<td id="rnk{{lstrnk}}"><center>{{lstrnk}}</center></td>
+					<td><center><img class="headshot" src={{img}} /></center></td>
+					<td id="name"><center>{{name}}</center></td>
+					<td><center>{{score}}%</center></td>
+				</tr>
+			{{/each}}
+		</table>
+
+		<!-- <table>
+			<th>Rank</th>
+			<th>Ugly</th>
+			<th>Name</th>
+			<th>Blackout Probability</th>
+			
+			{{#each GetFirst}}
+				<tr>
+					<td id="rnk{{lstrnk}}"><center>{{lstrnk}}</center></td>
+					<td><center><img class="headshot" src={{img}} /></center></td>
+					<td id="name"><center>{{name}}</center></td>
+					<td><center>{{score}}%</center></td>
+				</tr>
+			{{/each}}
+		</table> -->
+		
+		</center>
+	</div>
+</template>

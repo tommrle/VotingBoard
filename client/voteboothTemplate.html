@@ -1,0 +1,25 @@
+<template name="voteboothTemplate">
+	<div class="background-image"></div>
+	<div class="box-frame"></div>
+	<center>
+	<div class="box">
+		<div id="maintitle">Who's Studied The Most?</div>
+		{{#with GetLeftPerson}}
+		<div class="leftside">
+			<img id="voteimg" src={{img}} />
+		</div>
+		{{/with}}
+		{{#with GetRightPerson}}
+		<div class="rightside">
+			<img id="voteimg" src={{img}} />
+		</div>
+		{{/with}}
+		<nav>
+			<a href="{{ pathFor 'Leaderboard'}}" style="color:white;">Leaderboard</a>
+			 - 
+			<a href id="logout" style="color:white;">Log Out</a>
+		</nav>
+	</div>
+	</center>
+
+</template>
